@@ -1,12 +1,9 @@
 :root {
-  --bg-1: #0f1419;
-  --bg-2: #1a2332;
-  --text: #e8edf4;
-  --muted: #8b9cb3;
-  --accent: #3dd6c3;
-  --accent-2: #6ea8fe;
-  --card: rgba(255, 255, 255, 0.04);
-  --border: rgba(255, 255, 255, 0.08);
+  --bg: #000000;
+  --text: #ffffff;
+  --muted: #a0a0a0;
+  --pink: #f2a7c6;
+  --border: #2a2a2a;
 }
 
 * {
@@ -18,9 +15,7 @@ body {
   min-height: 100vh;
   font-family: "JetBrains Mono", "Fira Code", monospace;
   color: var(--text);
-  background: radial-gradient(circle at 20% 20%, #1f2a44 0%, transparent 40%),
-    radial-gradient(circle at 80% 0%, #173b3a 0%, transparent 35%),
-    linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  background: var(--bg);
   line-height: 1.6;
 }
 
@@ -54,7 +49,7 @@ a {
 }
 
 .eyebrow {
-  color: var(--accent);
+  color: var(--pink);
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -65,31 +60,13 @@ h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.15;
   font-weight: 700;
+  color: var(--text);
 }
 
 .lead {
   color: var(--muted);
   font-size: 1.05rem;
   max-width: 52ch;
-}
-
-.metrics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.4rem;
-}
-
-.metric {
-  border: 1px solid var(--border);
-  background: var(--card);
-  padding: 0.55rem 0.8rem;
-  border-radius: 8px;
-  font-size: 0.82rem;
-}
-
-.metric strong {
-  color: var(--accent-2);
 }
 
 .social-links {
@@ -104,16 +81,16 @@ h1 {
   align-items: center;
   gap: 0.45rem;
   border: 1px solid var(--border);
-  background: var(--card);
   padding: 0.55rem 0.85rem;
   border-radius: 999px;
   font-size: 0.85rem;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  color: var(--text);
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .social-links a:hover {
-  transform: translateY(-2px);
-  border-color: rgba(61, 214, 195, 0.45);
+  border-color: var(--pink);
+  color: var(--pink);
 }
 
 .social-links svg {
@@ -126,12 +103,12 @@ h1 {
   aspect-ratio: 1;
   border-radius: 18px;
   border: 1px solid var(--border);
-  background: linear-gradient(145deg, rgba(61, 214, 195, 0.2), rgba(110, 168, 254, 0.15));
+  background: var(--bg);
   display: grid;
   place-items: center;
   font-size: 3rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--pink);
   margin-inline: auto;
 }
 
@@ -144,7 +121,7 @@ h1 {
 section h2 {
   margin: 0 0 1rem;
   font-size: 1.1rem;
-  color: var(--accent);
+  color: var(--pink);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -156,19 +133,19 @@ section h2 {
 
 .project-card {
   border: 1px solid var(--border);
-  background: var(--card);
   border-radius: 12px;
   padding: 1rem 1.1rem;
   transition: border-color 0.2s ease;
 }
 
 .project-card:hover {
-  border-color: rgba(110, 168, 254, 0.45);
+  border-color: var(--pink);
 }
 
 .project-card h3 {
   margin: 0 0 0.35rem;
   font-size: 1rem;
+  color: var(--text);
 }
 
 .project-card p {
@@ -180,7 +157,7 @@ section h2 {
 .project-meta {
   margin-top: 0.55rem;
   font-size: 0.78rem;
-  color: var(--accent-2);
+  color: var(--muted);
 }
 
 .stack {
@@ -191,7 +168,6 @@ section h2 {
 
 .stack span {
   border: 1px solid var(--border);
-  background: var(--card);
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
   font-size: 0.78rem;
@@ -204,11 +180,14 @@ section h2 {
   padding: 2rem 0 3rem;
 }
 
+.footer a:hover {
+  color: var(--pink);
+}
+
 .nav-top {
   position: sticky;
   top: 0;
-  backdrop-filter: blur(8px);
-  background: rgba(15, 20, 25, 0.7);
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
   z-index: 10;
 }
@@ -228,7 +207,7 @@ section h2 {
 }
 
 .nav-inner a:hover {
-  color: var(--text);
+  color: var(--pink);
 }
 
 .projects-page {
@@ -238,9 +217,14 @@ section h2 {
 .projects-page h1 {
   font-size: 1.6rem;
   margin-bottom: 1.2rem;
+  color: var(--text);
 }
 
 .projects-page a.back {
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+.projects-page a.back:hover {
+  color: var(--pink);
 }
