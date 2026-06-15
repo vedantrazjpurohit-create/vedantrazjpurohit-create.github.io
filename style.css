@@ -139,17 +139,18 @@ a {
 .hero-glow {
   position: relative;
   display: inline-block;
+  isolation: isolate;
 }
 
 .hero-glow::before {
   content: "";
   position: absolute;
-  left: -8%;
-  right: -8%;
-  top: -30%;
-  bottom: -20%;
-  background: radial-gradient(ellipse at 40% 50%, rgba(242, 167, 198, 0.42) 0%, transparent 68%);
-  filter: blur(36px);
+  left: -12%;
+  right: -12%;
+  top: -35%;
+  bottom: -25%;
+  background: radial-gradient(ellipse at 40% 50%, rgba(242, 167, 198, 0.55) 0%, transparent 70%);
+  filter: blur(42px);
   z-index: -1;
   pointer-events: none;
   animation: glow-pulse 5s ease-in-out infinite;
@@ -337,7 +338,7 @@ section h2 {
 
 .tech-logo:hover img {
   opacity: 1;
-  filter: none;
+  filter: drop-shadow(0 0 14px rgba(242, 167, 198, 0.65));
   transform: scale(1.05);
 }
 
