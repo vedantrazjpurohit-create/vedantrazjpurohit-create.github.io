@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=IBM+Plex+Mono:wght@400&family=Italiana&family=JetBrains+Mono:wght@700&family=Oswald:wght@700&family=Playfair+Display:wght@700&family=Rubik+Mono+One&family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=7" />
+    <link rel="stylesheet" href="style.css?v=8" />
   </head>
   <body class="is-loading">
     <div id="loader" class="loader" aria-label="Loading">
@@ -32,8 +32,19 @@
       </div>
     </div>
 
-    <div class="cursor-dot" aria-hidden="true"></div>
-    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="cursor-bow" aria-hidden="true">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 13C11 7 5 9 7 15C9 18 12 16 14 14.5" fill="#ff4da6" />
+        <path d="M16 13C21 7 27 9 25 15C23 18 20 16 18 14.5" fill="#ff4da6" />
+        <circle cx="16" cy="14" r="2.8" fill="#ff85c8" />
+        <path d="M14.5 15.5L13 24L15.5 22L16 26L16.5 22L19 24L17.5 15.5Z" fill="#ff4da6" />
+      </svg>
+    </div>
+    <div class="cursor-v" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6L12 20L20 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
 
     <div class="site-content">
       <header class="nav-top">
@@ -193,6 +204,6 @@
     </div>
 
     <script src="loader.js?v=2"></script>
-    <script src="cursor.js?v=2"></script>
+    <script src="cursor.js?v=3"></script>
   </body>
 </html>

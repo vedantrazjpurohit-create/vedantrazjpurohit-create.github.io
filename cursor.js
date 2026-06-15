@@ -1,28 +1,40 @@
 (function () {
   if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
 
-  const dot = document.querySelector(".cursor-dot");
-  const ring = document.querySelector(".cursor-ring");
-  if (!dot || !ring) return;
+  const bow = document.querySelector(".cursor-bow");
+  const trail = document.querySelector(".cursor-v");
+  if (!bow || !trail) return;
 
   document.body.classList.add("has-cursor");
 
   let mouseX = window.innerWidth / 2;
   let mouseY = window.innerHeight / 2;
-  let ringX = mouseX;
-  let ringY = mouseY;
+  let trailX = mouseX;
+  let trailY = mouseY;
+  let prevX = mouseX;
+  let prevY = mouseY;
+  let tilt = 0;
   let hovering = false;
 
   document.addEventListener("mousemove", (e) => {
+    const dx = e.clientX - prevX;
+    const dy = e.clientY - prevY;
+    tilt += (Math.atan2(dy, dx) * (180 / Math.PI) + 90 - tilt) * 0.18;
+
+    prevX = e.clientX;
+    prevY = e.clientY;
     mouseX = e.clientX;
     mouseY = e.clientY;
-    dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+
+    const scale = hovering ? 1.35 : 1;
+    bow.style.transform = `translate(${mouseX}px, ${mouseY}px) rotate(${tilt * 0.35}deg) scale(${scale})`;
   });
 
   function animate() {
-    ringX += (mouseX - ringX) * 0.15;
-    ringY += (mouseY - ringY) * 0.15;
-    ring.style.transform = `translate(${ringX}px, ${ringY}px) scale(${hovering ? 1.55 : 1})`;
+    trailX += (mouseX - trailX) * 0.12;
+    trailY += (mouseY - trailY) * 0.12;
+    const trailScale = hovering ? 1.5 : 1;
+    trail.style.transform = `translate(${trailX}px, ${trailY}px) scale(${trailScale})`;
     requestAnimationFrame(animate);
   }
 
@@ -41,12 +53,12 @@
   });
 
   document.addEventListener("mouseleave", () => {
-    dot.style.opacity = "0";
-    ring.style.opacity = "0";
+    bow.style.opacity = "0";
+    trail.style.opacity = "0";
   });
 
   document.addEventListener("mouseenter", () => {
-    dot.style.opacity = "1";
-    ring.style.opacity = "1";
+    bow.style.opacity = "1";
+    trail.style.opacity = "1";
   });
 })();
