@@ -1,7 +1,8 @@
 :root {
   --bg: #000000;
-  --text: #ffffff;
-  --muted: #a0a0a0;
+  --text: #f2a7c6;
+  --body: #f5d4e4;
+  --muted: #9a7a8a;
   --pink: #f2a7c6;
   --border: #2a2a2a;
 }
@@ -13,10 +14,90 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: var(--text);
+  font-family: "Space Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--body);
   background: var(--bg);
   line-height: 1.6;
+}
+
+body.is-loading .site-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.site-content {
+  opacity: 1;
+  transition: opacity 0.8s ease 0.15s;
+}
+
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  z-index: 9998;
+}
+
+/* Noomo-style loader */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: #000;
+  display: grid;
+  place-items: center;
+  transition: opacity 0.85s ease, visibility 0.85s ease;
+}
+
+.loader--out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-inner {
+  text-align: center;
+  width: min(90vw, 520px);
+}
+
+.loader-word {
+  display: flex;
+  justify-content: center;
+  gap: 0.08em;
+  line-height: 1;
+}
+
+.loader-letter {
+  font-size: clamp(3.5rem, 14vw, 6.5rem);
+  font-weight: 700;
+  color: var(--pink);
+  display: inline-block;
+  min-width: 0.55em;
+  transition: font-family 0.05s linear;
+  letter-spacing: -0.02em;
+}
+
+.loader-caption {
+  margin: 1.4rem 0 0.8rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.loader-bar {
+  height: 1px;
+  background: #1f1f1f;
+  overflow: hidden;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--pink);
+  transition: width 0.1s linear;
 }
 
 a {
@@ -60,7 +141,7 @@ h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.15;
   font-weight: 700;
-  color: var(--text);
+  color: var(--pink);
 }
 
 .lead {
@@ -84,8 +165,8 @@ h1 {
   padding: 0.55rem 0.85rem;
   border-radius: 999px;
   font-size: 0.85rem;
-  color: var(--text);
-  transition: border-color 0.2s ease, color 0.2s ease;
+  color: var(--pink);
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .social-links a:hover {
@@ -145,7 +226,7 @@ section h2 {
 .project-card h3 {
   margin: 0 0 0.35rem;
   font-size: 1rem;
-  color: var(--text);
+  color: var(--pink);
 }
 
 .project-card p {
@@ -217,7 +298,7 @@ section h2 {
 .projects-page h1 {
   font-size: 1.6rem;
   margin-bottom: 1.2rem;
-  color: var(--text);
+  color: var(--pink);
 }
 
 .projects-page a.back {

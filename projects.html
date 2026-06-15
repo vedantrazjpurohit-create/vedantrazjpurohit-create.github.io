@@ -6,79 +6,88 @@
     <title>Projects · Vedant Rajpurohit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <style>
-      html, body {
-        margin: 0;
-        background: #000 !important;
-        color: #fff !important;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-      }
-      section h2, .projects-page h1 { color: #fff !important; }
-      .eyebrow, section h2 { color: #f2a7c6 !important; }
-      .lead, .project-card p, .project-meta, .footer, .nav-inner a, .projects-page a.back { color: #a0a0a0 !important; }
-      .project-card h3 { color: #fff !important; }
-      .social-links a:hover, .nav-inner a:hover, .projects-page a.back:hover { color: #f2a7c6 !important; }
-    </style>
-    <link rel="stylesheet" href="style.css?v=3" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=IBM+Plex+Mono:wght@400&family=Italiana&family=JetBrains+Mono:wght@700&family=Oswald:wght@700&family=Playfair+Display:wght@700&family=Rubik+Mono+One&family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=4" />
   </head>
-  <body>
-    <header class="nav-top">
-      <div class="nav-inner">
-        <a href="index.html">vedant</a>
-        <nav>
-          <a href="projects.html">projects</a>
-        </nav>
+  <body class="is-loading">
+    <div id="loader" class="loader" aria-label="Loading">
+      <div class="loader-inner">
+        <div class="loader-word" aria-hidden="true">
+          <span class="loader-letter">V</span>
+          <span class="loader-letter">E</span>
+          <span class="loader-letter">D</span>
+          <span class="loader-letter">A</span>
+          <span class="loader-letter">N</span>
+          <span class="loader-letter">T</span>
+        </div>
+        <p class="loader-caption">loading</p>
+        <div class="loader-bar"><div class="loader-bar-fill"></div></div>
       </div>
-    </header>
+    </div>
 
-    <main class="wrap projects-page">
-      <a class="back" href="index.html">← back</a>
-      <h1>Projects</h1>
+    <div class="site-content">
+      <header class="nav-top">
+        <div class="nav-inner">
+          <a href="index.html">vedant</a>
+          <nav>
+            <a href="projects.html">projects</a>
+          </nav>
+        </div>
+      </header>
 
-      <div class="project-list">
-        <a
-          class="project-card"
-          href="https://github.com/vedantrazjpurohit-create/aruco-localizer"
-          target="_blank"
-          rel="noopener"
-        >
-          <h3>aruco-localizer</h3>
-          <p>
-            Detects ArUco fiducial markers and estimates pose relative to the camera.
-            Outputs JSON telemetry for a mobile robot controller.
-          </p>
-          <div class="project-meta">OpenCV · pose estimation · pytest</div>
-        </a>
+      <main class="wrap projects-page">
+        <a class="back" href="index.html">← back</a>
+        <h1>Projects</h1>
 
-        <a
-          class="project-card"
-          href="https://github.com/vedantrazjpurohit-create/rag-eval-bench"
-          target="_blank"
-          rel="noopener"
-        >
-          <h3>rag-eval-bench</h3>
-          <p>
-            End-to-end retrieval evaluation with YAML configs and JSON run artifacts
-            you can diff between experiments.
-          </p>
-          <div class="project-meta">Python · ChromaDB · sentence-transformers</div>
-        </a>
+        <div class="project-list">
+          <a
+            class="project-card"
+            href="https://github.com/vedantrazjpurohit-create/aruco-localizer"
+            target="_blank"
+            rel="noopener"
+          >
+            <h3>aruco-localizer</h3>
+            <p>
+              Detects ArUco fiducial markers and estimates pose relative to the camera.
+              Outputs JSON telemetry for a mobile robot controller.
+            </p>
+            <div class="project-meta">OpenCV · pose estimation · pytest</div>
+          </a>
 
-        <a
-          class="project-card"
-          href="https://github.com/vedantrazjpurohit-create/rag-api"
-          target="_blank"
-          rel="noopener"
-        >
-          <h3>rag-api</h3>
-          <p>
-            HTTP layer over local retrieval. Upload docs, query with top-k, inspect
-            timing via response headers.
-          </p>
-          <div class="project-meta">POST /ingest · POST /query · GET /health</div>
-        </a>
+          <a
+            class="project-card"
+            href="https://github.com/vedantrazjpurohit-create/rag-eval-bench"
+            target="_blank"
+            rel="noopener"
+          >
+            <h3>rag-eval-bench</h3>
+            <p>
+              End-to-end retrieval evaluation with YAML configs and JSON run artifacts
+              you can diff between experiments.
+            </p>
+            <div class="project-meta">Python · ChromaDB · sentence-transformers</div>
+          </a>
 
-      </div>
-    </main>
+          <a
+            class="project-card"
+            href="https://github.com/vedantrazjpurohit-create/rag-api"
+            target="_blank"
+            rel="noopener"
+          >
+            <h3>rag-api</h3>
+            <p>
+              HTTP layer over local retrieval. Upload docs, query with top-k, inspect
+              timing via response headers.
+            </p>
+            <div class="project-meta">POST /ingest · POST /query · GET /health</div>
+          </a>
+        </div>
+      </main>
+    </div>
+
+    <script src="loader.js?v=1"></script>
   </body>
 </html>
