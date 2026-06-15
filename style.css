@@ -276,6 +276,7 @@ section h2 {
 
 .toolkit {
   padding-bottom: 1rem;
+  overflow: visible;
 }
 
 .toolkit-lead {
@@ -286,10 +287,11 @@ section h2 {
 }
 
 .tech-marquee {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  padding: 1.2rem 0 0.6rem;
+  padding: 2rem 0 0.8rem;
   mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
 }
@@ -312,6 +314,7 @@ section h2 {
   align-items: center;
   gap: 0.55rem;
   min-width: 4.5rem;
+  padding: 0.75rem 0 0.25rem;
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -356,8 +359,8 @@ section h2 {
 }
 
 .tech-marquee--reverse {
-  padding-top: 0.4rem;
-  opacity: 0.75;
+  padding-top: 2rem;
+  opacity: 0.85;
 }
 
 .tech-track--reverse {
@@ -369,8 +372,8 @@ section h2 {
 }
 
 .tech-marquee--reverse .tech-logo img {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
 }
 
 @keyframes tech-scroll-reverse {
