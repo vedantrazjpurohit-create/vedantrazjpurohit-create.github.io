@@ -136,12 +136,44 @@ a {
   text-transform: uppercase;
 }
 
+.hero-glow {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-glow::before {
+  content: "";
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  top: -30%;
+  bottom: -20%;
+  background: radial-gradient(ellipse at 40% 50%, rgba(242, 167, 198, 0.42) 0%, transparent 68%);
+  filter: blur(36px);
+  z-index: -1;
+  pointer-events: none;
+  animation: glow-pulse 5s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+
 h1 {
   margin: 0.4rem 0 0.8rem;
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.15;
   font-weight: 700;
   color: var(--pink);
+  text-shadow: 0 0 40px rgba(242, 167, 198, 0.25);
 }
 
 .lead {
@@ -320,6 +352,79 @@ section h2 {
   to {
     transform: translateX(-50%);
   }
+}
+
+.tech-marquee--reverse {
+  padding-top: 0.4rem;
+  opacity: 0.75;
+}
+
+.tech-track--reverse {
+  animation: tech-scroll-reverse 44s linear infinite;
+}
+
+.tech-marquee--reverse:hover .tech-track--reverse {
+  animation-play-state: paused;
+}
+
+.tech-marquee--reverse .tech-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes tech-scroll-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Custom cursor */
+body.has-cursor,
+body.has-cursor a,
+body.has-cursor button {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10001;
+  border-radius: 50%;
+  transform: translate(-100px, -100px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: var(--pink);
+  box-shadow: 0 0 12px rgba(242, 167, 198, 0.9);
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  border: 1px solid rgba(242, 167, 198, 0.55);
+  transition: transform 0.15s ease, border-color 0.2s ease;
+}
+
+body.cursor-hover .cursor-ring {
+  border-color: var(--pink);
+  background: rgba(242, 167, 198, 0.06);
+}
+
+body.has-cursor .cursor-dot,
+body.has-cursor .cursor-ring {
+  opacity: 1;
 }
 
 .footer {

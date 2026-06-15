@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=IBM+Plex+Mono:wght@400&family=Italiana&family=JetBrains+Mono:wght@700&family=Oswald:wght@700&family=Playfair+Display:wght@700&family=Rubik+Mono+One&family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=5" />
+    <link rel="stylesheet" href="style.css?v=6" />
   </head>
   <body class="is-loading">
     <div id="loader" class="loader" aria-label="Loading">
@@ -32,6 +32,9 @@
       </div>
     </div>
 
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
     <div class="site-content">
       <header class="nav-top">
         <div class="nav-inner">
@@ -47,7 +50,9 @@
           <div class="hero-grid">
             <div>
               <p class="eyebrow">Robotics &amp; AI Engineer</p>
-              <h1>Vedant Rajpurohit</h1>
+              <div class="hero-glow">
+                <h1>Vedant Rajpurohit</h1>
+              </div>
               <p class="lead">
                 I build systems where retrieval, evaluation, and control have to
                 work in the real world — not just in a notebook cell.
@@ -157,6 +162,30 @@
               <div class="tech-logo" aria-hidden="true"><img src="https://cdn.simpleicons.org/linux/9a7a8a" alt="" width="36" height="36" /><span>Linux</span></div>
             </div>
           </div>
+          <div class="tech-marquee tech-marquee--reverse" aria-hidden="true">
+            <div class="tech-track tech-track--reverse">
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/docker/9a7a8a" alt="" width="32" height="32" /><span>Docker</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/cplusplus/9a7a8a" alt="" width="32" height="32" /><span>C++</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/huggingface/9a7a8a" alt="" width="32" height="32" /><span>HF</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/github/9a7a8a" alt="" width="32" height="32" /><span>GitHub</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/visualstudiocode/9a7a8a" alt="" width="32" height="32" /><span>VS Code</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/postgresql/9a7a8a" alt="" width="32" height="32" /><span>SQL</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/espressif/9a7a8a" alt="" width="32" height="32" /><span>ESP32</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/pytorch/9a7a8a" alt="" width="32" height="32" /><span>PyTorch</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/python/9a7a8a" alt="" width="32" height="32" /><span>Python</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/ros/9a7a8a" alt="" width="32" height="32" /><span>ROS2</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/docker/9a7a8a" alt="" width="32" height="32" /><span>Docker</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/cplusplus/9a7a8a" alt="" width="32" height="32" /><span>C++</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/huggingface/9a7a8a" alt="" width="32" height="32" /><span>HF</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/github/9a7a8a" alt="" width="32" height="32" /><span>GitHub</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/visualstudiocode/9a7a8a" alt="" width="32" height="32" /><span>VS Code</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/postgresql/9a7a8a" alt="" width="32" height="32" /><span>SQL</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/espressif/9a7a8a" alt="" width="32" height="32" /><span>ESP32</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/pytorch/9a7a8a" alt="" width="32" height="32" /><span>PyTorch</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/python/9a7a8a" alt="" width="32" height="32" /><span>Python</span></div>
+              <div class="tech-logo"><img src="https://cdn.simpleicons.org/ros/9a7a8a" alt="" width="32" height="32" /><span>ROS2</span></div>
+            </div>
+          </div>
         </section>
 
         <p class="footer">B.Tech Robotics &amp; AI · KJ Somaiya, Vidyavihar</p>
@@ -164,5 +193,6 @@
     </div>
 
     <script src="loader.js?v=1"></script>
+    <script src="cursor.js?v=1"></script>
   </body>
 </html>
