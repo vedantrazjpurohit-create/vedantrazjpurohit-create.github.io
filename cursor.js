@@ -1,9 +1,9 @@
 (function () {
   if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
 
-  const bow = document.querySelector(".cursor-bow");
+  const kitty = document.querySelector(".cursor-kitty");
   const trail = document.querySelector(".cursor-v");
-  if (!bow || !trail) return;
+  if (!kitty || !trail) return;
 
   document.body.classList.add("has-cursor");
 
@@ -27,7 +27,7 @@
     mouseY = e.clientY;
 
     const scale = hovering ? 1.35 : 1;
-    bow.style.transform = `translate(${mouseX}px, ${mouseY}px) rotate(${tilt * 0.35}deg) scale(${scale})`;
+    kitty.style.transform = `translate(${mouseX}px, ${mouseY}px) rotate(${tilt * 0.2}deg) scale(${scale})`;
   });
 
   function animate() {
@@ -53,12 +53,12 @@
   });
 
   document.addEventListener("mouseleave", () => {
-    bow.style.opacity = "0";
+    kitty.style.opacity = "0";
     trail.style.opacity = "0";
   });
 
   document.addEventListener("mouseenter", () => {
-    bow.style.opacity = "1";
+    kitty.style.opacity = "1";
     trail.style.opacity = "1";
   });
 })();
