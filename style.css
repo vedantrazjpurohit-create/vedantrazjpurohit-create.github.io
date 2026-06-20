@@ -185,10 +185,30 @@ h1 {
   text-shadow: 0 0 40px rgba(242, 167, 198, 0.25);
 }
 
+.hero-name {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--body);
+  letter-spacing: 0.02em;
+}
+
+.hero-degree {
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+}
+
 .lead {
   color: var(--muted);
   font-size: 1.05rem;
   max-width: 52ch;
+}
+
+.lead--stack {
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
 }
 
 .social-links {
@@ -268,6 +288,29 @@ section h2 {
   margin: 0 0 0.35rem;
   font-size: 1rem;
   color: var(--pink);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.project-lang {
+  display: inline-block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--body);
+  background: rgba(242, 167, 198, 0.12);
+  border: 1px solid rgba(242, 167, 198, 0.35);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.timeline-body .project-lang {
+  margin-right: 0.35rem;
 }
 
 .project-card p {
@@ -534,6 +577,12 @@ body.cursor-hover .cursor-v {
 body.has-cursor .cursor-bow,
 body.has-cursor .cursor-v {
   opacity: 1;
+}
+
+.footer-name {
+  margin-bottom: 0.2rem;
+  color: var(--body);
+  font-weight: 600;
 }
 
 .footer {

@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=IBM+Plex+Mono:wght@400&family=Italiana&family=JetBrains+Mono:wght@700&family=Oswald:wght@700&family=Playfair+Display:wght@700&family=Rubik+Mono+One&family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=12" />
+    <link rel="stylesheet" href="style.css?v=13" />
   </head>
   <body class="is-loading">
     <div id="loader" class="loader" aria-label="Loading">
@@ -64,12 +64,14 @@
               <div class="hero-glow">
                 <h1>vedant</h1>
               </div>
+              <p class="hero-name">Vedant Rajpurohit</p>
+              <p class="hero-degree">B.Tech Robotics &amp; AI @ KJ Somaiya, Vidyavihar</p>
               <p class="lead">
                 I build systems where retrieval, evaluation, and control have to
                 work in the real world — not just in a notebook cell.
               </p>
-              <p class="lead" style="margin-top: 0.8rem; font-size: 0.95rem;">
-                Robotics &amp; AI @ KJ Somaiya · OpenCV · ROS2 · FastAPI
+              <p class="lead lead--stack">
+                OpenCV · ROS2 · FastAPI · Python · C
               </p>
 
               <div class="social-links">
@@ -114,35 +116,35 @@
               <time datetime="2025-07-06">6 Jul 2025</time>
               <div class="timeline-body">
                 <h3><a href="https://github.com/vedantrazjpurohit-create/student-crud-c" target="_blank" rel="noopener">student-crud-c</a></h3>
-                <p>First repo after DS lab — clean C CRUD without scanf edge-case crashes.</p>
+                <p><span class="project-lang">C</span> First repo after DS lab — clean CRUD without scanf edge-case crashes.</p>
               </div>
             </li>
             <li class="timeline-item">
               <time datetime="2025-08-14">14 Aug 2025</time>
               <div class="timeline-body">
                 <h3><a href="https://github.com/vedantrazjpurohit-create/aruco-localizer" target="_blank" rel="noopener">aruco-localizer</a></h3>
-                <p>Robotics elective — fiducial markers into pose JSON for localization.</p>
+                <p><span class="project-lang">Python</span> Robotics elective — fiducial markers into pose JSON for localization.</p>
               </div>
             </li>
             <li class="timeline-item">
               <time datetime="2025-10-09">9 Oct 2025</time>
               <div class="timeline-body">
                 <h3><a href="https://github.com/vedantrazjpurohit-create/rag-eval-bench" target="_blank" rel="noopener">rag-eval-bench</a></h3>
-                <p>RAG demos needed real metrics — recall, faithfulness, latency on PDFs.</p>
+                <p><span class="project-lang">Python</span> RAG demos needed real metrics — recall, faithfulness, latency on PDFs.</p>
               </div>
             </li>
             <li class="timeline-item">
               <time datetime="2025-11-21">21 Nov 2025</time>
               <div class="timeline-body">
                 <h3><a href="https://github.com/vedantrazjpurohit-create/rag-api" target="_blank" rel="noopener">rag-api</a></h3>
-                <p>Same retrieval stack as a deployable FastAPI ingest/query service.</p>
+                <p><span class="project-lang">Python</span> Same retrieval stack as a deployable FastAPI ingest/query service.</p>
               </div>
             </li>
             <li class="timeline-item">
               <time datetime="2026-02-05">5 Feb 2026</time>
               <div class="timeline-body">
                 <h3><a href="https://vedantrazjpurohit-create.github.io/" target="_blank" rel="noopener">portfolio</a></h3>
-                <p>GitHub Pages site to tie robotics + RAG work together for internships.</p>
+                <p><span class="project-lang">HTML/CSS</span> GitHub Pages site to tie robotics + RAG work together for internships.</p>
               </div>
             </li>
           </ol>
@@ -159,9 +161,9 @@
               target="_blank"
               rel="noopener"
             >
-              <h3>aruco-localizer</h3>
-              <p>ArUco marker detection and pose estimation for robot localization.</p>
-              <div class="project-meta">OpenCV · Python · webcam / image pipeline</div>
+              <h3>aruco-localizer <span class="project-lang">Python</span></h3>
+              <p>Python — ArUco marker detection and pose estimation for robot localization.</p>
+              <div class="project-meta">OpenCV · webcam / image pipeline · pytest</div>
             </a>
             <a
               class="project-card"
@@ -169,9 +171,9 @@
               target="_blank"
               rel="noopener"
             >
-              <h3>rag-eval-bench</h3>
-              <p>RAG evaluation harness — ingestion, retrieval, and scoring pipeline.</p>
-              <div class="project-meta">Python · ChromaDB · sentence-transformers</div>
+              <h3>rag-eval-bench <span class="project-lang">Python</span></h3>
+              <p>Python — RAG evaluation harness with ingestion, retrieval, and scoring pipeline.</p>
+              <div class="project-meta">ChromaDB · sentence-transformers · nDCG</div>
             </a>
             <a
               class="project-card"
@@ -179,9 +181,9 @@
               target="_blank"
               rel="noopener"
             >
-              <h3>rag-api</h3>
-              <p>FastAPI retrieval service with ingest/query endpoints and timing headers.</p>
-              <div class="project-meta">FastAPI · embeddings · deployable API</div>
+              <h3>rag-api <span class="project-lang">Python</span></h3>
+              <p>Python — FastAPI retrieval service with ingest/query endpoints and timing headers.</p>
+              <div class="project-meta">FastAPI · ChromaDB · /stats · upsert ingest</div>
             </a>
             <a
               class="project-card"
@@ -189,9 +191,9 @@
               target="_blank"
               rel="noopener"
             >
-              <h3>student-crud-c</h3>
-              <p>C fundamentals — CRUD, pointers, and clean stdin handling without crashes.</p>
-              <div class="project-meta">C · systems basics · -Wall clean</div>
+              <h3>student-crud-c <span class="project-lang">C</span></h3>
+              <p>C — CRUD, pointers, and clean stdin handling without crashes.</p>
+              <div class="project-meta">structs · roll lookup · gcc -Wall clean</div>
             </a>
           </div>
           <p class="footer"><a href="projects.html">More detail on each project →</a></p>
@@ -253,6 +255,7 @@
       </section>
 
       <main class="wrap">
+        <p class="footer footer-name">Vedant Rajpurohit</p>
         <p class="footer">B.Tech Robotics &amp; AI · KJ Somaiya, Vidyavihar</p>
       </main>
     </div>
