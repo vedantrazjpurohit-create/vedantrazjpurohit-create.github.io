@@ -518,64 +518,40 @@ section h2 {
   }
 }
 
-/* Custom cursor — Hello Kitty + lagging V trail */
+/* Custom cursor — Cupid's bow */
 body.has-cursor,
 body.has-cursor a,
 body.has-cursor button {
   cursor: none;
 }
 
-.cursor-kitty,
-.cursor-v {
+.cursor-bow {
   position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
   z-index: 10001;
+  width: 26px;
+  height: 26px;
+  margin: -13px 0 0 -13px;
   transform: translate(-100px, -100px);
   opacity: 0;
-  transition: opacity 0.25s ease;
+  filter: drop-shadow(0 0 8px rgba(255, 77, 166, 0.85)) drop-shadow(0 0 18px rgba(255, 77, 166, 0.35));
+  transition: opacity 0.25s ease, filter 0.2s ease;
   will-change: transform;
 }
 
-.cursor-kitty {
-  width: 30px;
-  height: 30px;
-  margin: -15px 0 0 -15px;
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 14px rgba(255, 77, 166, 0.45));
-  transition: opacity 0.25s ease, filter 0.2s ease;
-}
-
-.cursor-kitty img {
+.cursor-bow img {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.cursor-v {
-  width: 28px;
-  height: 28px;
-  margin: -14px 0 0 -14px;
-  color: rgba(242, 167, 198, 0.22);
-  transition: color 0.2s ease, opacity 0.25s ease;
+body.cursor-hover .cursor-bow {
+  filter: drop-shadow(0 0 12px rgba(255, 77, 166, 1)) drop-shadow(0 0 28px rgba(255, 77, 166, 0.55));
 }
 
-.cursor-v svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-body.cursor-hover .cursor-kitty {
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.75)) drop-shadow(0 0 22px rgba(255, 77, 166, 0.75));
-}
-
-body.cursor-hover .cursor-v {
-  color: rgba(255, 77, 166, 0.55);
-}
-
-body.has-cursor .cursor-kitty,
-body.has-cursor .cursor-v {
+body.has-cursor .cursor-bow {
   opacity: 1;
 }
 
